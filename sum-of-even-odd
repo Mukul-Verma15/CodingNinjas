@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+  // Write your code here
+  int n;
+  cin>>n;
+  int d, sum = 0, sums = 0;
+  while (n > 0)
+  {
+     d=n%10;
+	 if(d%2==0)
+	 {
+		 sum+=d;
+	 }
+	 else
+	 {
+		 sums+=d;
+	 }
+	 n/=10;
+  }
+  cout<<sum<<" "<<sums;
+}
