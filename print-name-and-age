@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+#include<iostream>
+
+using namespace std;
+
+class Person {
+
+    // Complete the class
+    public:
+       string name;
+       int age;
+    void display()
+    {
+        cin>>name;
+        cin>>age;
+        cout<<"The name of the person is "<<name<<" and the age is "<<age<<".";
+    }
+
+};
+
+int main() {
+
+    //Write your code here
+    Person obj;
+    obj.display();
+
+    return 0;
+}
