@@ -1,0 +1,9 @@
+vector<int> printNos(int x) {
+    // Write Your Code Here
+    int i=0;
+    begin:
+      i=i+1;
+      cout<<i<<" ";
+    if(i<x)
+      goto begin;
+}
