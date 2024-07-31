@@ -1,0 +1,15 @@
+vector<int> generateFibonacciNumbers(int n) {
+    // Write your code here.
+    int prev1 = 1;
+    int prev2 = 0;
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<prev2<<" ";
+        int fn = prev1 + prev2;
+        prev2 = prev1;
+        prev1 = fn;
+        
+    }
+    
+}
