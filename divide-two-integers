@@ -1,0 +1,6 @@
+int divideTwoInteger(int dividend, int divisor) {
+	// Write your code here.
+
+	int ans=dividend/divisor;
+	return ans;
+} 
