@@ -1,0 +1,16 @@
+Node *findMiddle(Node *head) {
+    // Write your code here
+    Node *slow=head;
+    Node *fast=head;
+    
+    if(fast==NULL)
+      return NULL;
+      
+    while(fast!=NULL && fast->next!=NULL)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    head=slow;
+    return head;
+}
