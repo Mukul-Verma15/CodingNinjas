@@ -1,0 +1,16 @@
+int searchInLinkedList(Node<int> *head, int k) {
+    // Write your code here.
+    Node<int> *temp=head;
+    
+    if(temp==NULL)
+      return 0;
+      
+    while(temp!=NULL && temp->next!=NULL && temp->data!=k){
+        temp=temp->next;
+    }
+    if(temp->data==k)
+    {
+        return 1;
+    }
+    return 0; 
+}
