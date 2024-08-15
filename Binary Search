@@ -1,0 +1,11 @@
+int search(vector<int> &nums, int target) {
+    // Write your code here.
+    auto it = std::lower_bound(nums.begin(), nums.end(), target);
+    if (it == nums.end() || *it != target) {
+        return -1;
+    } else {
+        std::size_t index = std::distance(nums.begin(), it);
+        return index;
+    }   
+
+} 
