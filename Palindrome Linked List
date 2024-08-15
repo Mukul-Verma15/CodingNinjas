@@ -1,0 +1,36 @@
+bool isPalindrome(LinkedListNode<int> *head) {
+    // Write your code here.
+    LinkedListNode<int> *slow=head;
+    LinkedListNode<int> *fast=head;
+   
+    if(!head || !head->next) return true;
+
+    while(fast && fast->next!=NULL){
+        fast=fast->next->next;
+        slow=slow->next;
+    }
+
+    LinkedListNode<int> *prev=NULL;
+    LinkedListNode<int> *curr=slow;
+    LinkedListNode<int> *forw=NULL;
+
+    while(curr){
+        forw=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=forw;
+    }
+
+    LinkedListNode<int> *left=head;
+    LinkedListNode<int> *right=prev;
+
+
+    while(right)
+    {
+        if(left->data!=right->data)  return false;
+
+        left=left->next;
+        right=right->next;
+    }
+    return true;
+}
