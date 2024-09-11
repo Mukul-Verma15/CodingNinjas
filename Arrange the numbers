@@ -1,0 +1,11 @@
+int maximumSubarraySum(int n, vector<int> &v) {
+    // Write your code here.
+    int maxSum = 0;
+    for (int num : v) {
+        if (num > 0) {
+            maxSum += num;
+        }
+    }
+
+    return maxSum;
+}
