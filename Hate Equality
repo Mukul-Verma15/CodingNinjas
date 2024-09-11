@@ -1,0 +1,8 @@
+int canYouMakeDifference(int n, string &s) {
+    // Write your code here.
+    string rev=s;
+    reverse(rev.begin(),rev.end());
+    if(rev==s) return 0;
+    return 1;
+
+}
